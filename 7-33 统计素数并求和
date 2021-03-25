@@ -1,0 +1,33 @@
+//7-33 统计素数并求和
+//本题要求统计给定整数M和N区间内素数的个数并对它们求和
+#include<stdio.h>
+int main()
+{
+	int m,n,sum=0,count=0,a,i;
+	scanf("%d %d",&m,&n);
+	a=m;
+	if(a<=1)
+		a=2;//当n为1或0的时候 
+	
+	while(a<=n){
+		
+		int isprime=1;//a=0,a=1?
+		for(i=2;i<a-1;i++){
+			if(a%i==0){
+				isprime = 0;
+				break;
+			}
+		}
+			if(isprime){
+				count++;
+				sum=sum+a;
+			}
+				
+			
+	
+		a++;
+	}
+
+	printf("%d %d",count,sum);
+	return 0;
+}
