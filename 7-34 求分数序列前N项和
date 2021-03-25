@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+	int n,i=1;
+	double fm=1,fz=2,a,b;//a和b用于储存分母分子的值 
+	double f, sum=0;
+	
+	scanf ("%d",&n);
+	for(i;i<=n;i++){
+		f=fz/fm;
+
+		sum=sum+f;
+		a=fz;
+		b=fm;
+		fm=fz;
+		fz=b+a;
+		
+	}
+	printf("%.2f",sum);
+	return 0;
+}
