@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+	int n;
+	int y=0,f=0,flag=0;
+	scanf("%d",&n);
+//	sum=2*y*10+2*f+n;
+//	f*10+y-(2*y*10+2*f)=n;
+	
+	for(f=0;f<100;f++){
+		for(y=0;y<=49;y++){
+			if(98*f-199*y==n){
+				printf("%d.%d",y,f);
+				flag=1;
+				break;
+			}
+	
+			
+		}
+		
+	}
+	if(flag==0){
+			printf("No Solution");
+	}
+
+	
+	
+	return 0;
+}
