@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	int sum=1,N;
+	scanf("%d",&N);
+	while(N>1){//运算n-1次
+		sum=(sum+1)*2;
+		N--;
+	}
+	printf("%d",sum);
+
+	return 0;
+}
+//经过n-1次的/2 -1运算变成了一。
