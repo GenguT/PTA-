@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+	int k,n=54;
+	int start[55];
+	int next[55];
+	int end[55];
+	char mp[]={'S','H','C','D','J'};
+	scanf("%d",&k);
+	
+	for(int i=1;i<=n;i++){//读入1到54编号 
+		start[i]=i;
+	}
+	
+	for(int i=1;i<=n;i++){//读入用于排序的混乱数字 
+		scanf("%d",&next[i]);		
+	}
+	
+	for(int step=0; step<k; step++){
+		
+		for(int i=1; i<=n; i++){
+			end[next[i]]=start[i];
+		}
+		
+		for(int i=1; i<=n; i++){
+			start[i]=end[i];
+		}
+		
+	}
+	
+	for(int i=1; i<=n; i++){
+		start[i]--;
+		printf("%c%d",mp[start[i] / 13],start[i]%13+1);
+		if(i!=54){
+			printf(" ");
+		}
+	}
+	
+	return 0;
+}
