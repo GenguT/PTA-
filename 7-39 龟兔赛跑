@@ -1,0 +1,56 @@
+#include<stdio.h>
+int main()
+{
+	int time=0,n,count=0;
+	int trip_r=0,trip_t=0;
+	int end=0;
+	
+	scanf("%d",&n);
+	
+	while(!end){
+		if(trip_r>trip_t){//xiuxi
+			for(count=0;count<30;count++){
+				trip_t+=3;
+				time++;
+				
+			 if(time == n){ // 时间到，判胜负
+                    if(trip_t>trip_r){
+                        printf("@_@ %d\n", trip_t);
+                    }
+                    else if(trip_t<trip_r){
+                        printf("^_^ %d\n", trip_r);
+                    }
+                    else{
+                        printf("-_-\ %d\n", trip_r);
+                    }
+                    end = 1;
+                    break; // 比赛结束
+                }
+
+				
+			}
+		}else{//paobu
+			for(count=0;count<10;count++){
+			
+			trip_t+=3;
+			trip_r+=9;
+			time++;
+			if(time == n){ // 时间到，判胜负
+                    if(trip_t>trip_r){
+                        printf("@_@ %d\n", trip_t);
+                    }
+                    else if(trip_t<trip_r){
+                        printf("^_^ %d\n", trip_r);
+                    }
+                    else{
+                        printf("-_-\ %d\n",trip_r);
+                    }
+                    end = 1;
+                    break; // 比赛结束
+                }
+}
+		}
+	}
+	
+	return 0;
+}
