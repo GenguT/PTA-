@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(){
+    int n,i;
+    double height, weight;//weight会在后面做除法运算
+    double stan, error;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+    	scanf("%lf %lf",&height,&weight);
+    	stan=(height-100)*0.9;
+    	error=weight/2-stan;
+    	if(error<stan*0.1&&error>stan*0.1*-1){
+    		printf("You are wan mei!\n");
+		}else if(weight/2>stan){
+			printf("You are tai pang le!\n");
+		}else if(weight/2<stan){
+			printf("You are tai shou le!\n");
+		}
+	}
+
+    return 0;
+}
