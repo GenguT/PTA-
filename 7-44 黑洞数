@@ -17,7 +17,7 @@ int main()
 	
 }
 
-int findmax(int a)
+int findmax(int a)//输入一个变量，将其转化为数组，再用冒泡算法排序，返回一个最大值
 {
 	int num[3],result,i;
 	for(i=0;i<3;i++){
@@ -39,7 +39,7 @@ int findmax(int a)
 
 }
 
-int findmin(int a)
+int findmin(int a)//输入一个变量，将其转化为数组，再用冒泡算法排序，返回一个最小值
 {
 	int num[3],result,i;
 	for(i=0;i<3;i++){
