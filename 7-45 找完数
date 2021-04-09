@@ -1,0 +1,56 @@
+////读入两个数，确认范围。用一个循环遍历这个范围。
+// 接着用1 絤ax/2，取余，如果余数为零，用数组记录，最后用循环输出这个数组
+//debug真有意思
+
+#include<stdio.h>
+int main()
+{
+	int min,max;
+	scanf("%d %d",&min,&max);//读入范围 
+	
+	int i,j,k=0,flag=0,factor[5000]={0};
+	for(i=min;i<=max;i++){
+	//	 printf("%d\n",i);
+	//	i=28;
+		for(j=1;j<=i/2;j++){//得到因子组成的数组 
+			if(i%j==0){
+			//	int k=0;
+			    
+				factor[k] = j;
+			//	printf("factor[%d]=%d\n",k,factor[k]);
+				k++;
+			}
+		}
+		
+		
+	    int length=k;
+	    //printf("length=%d\n",length);
+	    k=0;//小套路，在这种只有特殊值才用数组记录的情况，用k来当数组下标用过后要记得释放。
+		int cnt,sum=0;
+		for	(cnt=0;cnt<length;cnt++){//判断是不是完数	
+			if(factor[cnt]==0){
+				break;
+			}
+			sum=sum+factor[cnt];
+				
+     	}
+  //   	printf("%d\n",sum);
+  //   	int length=sizeof(factor)/sizeof(factor[0]);
+     	if(i==sum){
+     		flag++;
+     		printf("%d = ",i);
+     		int b;
+     		for(b=0;b<length;b++){
+     			if(factor[b]==i/2){
+     				printf("%d\n",factor[b]);
+				 }else{
+				 	printf("%d + ",factor[b]);
+				 }
+			 }
+		 }
+}
+if(flag==0){
+		printf("None");
+	}
+return 0;
+}
