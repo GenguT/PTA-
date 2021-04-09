@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	int n,u,d;
+	scanf("%d %d %d",&n,&u,&d);
+	
+	int distance=u-d;//每两分钟爬升的距离
+	int cnt;
+	for(cnt=0;n-distance*cnt>u;cnt++){//必然在向上爬的时候结束，因此
+		
+	}
+	printf("%d",cnt*2+1);
+	return 0;
+}
