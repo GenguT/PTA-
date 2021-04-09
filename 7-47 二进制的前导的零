@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	unsigned int number;//负整数在计算机内部以补码的形式表达，最高位为1，要用无符号整型才能表达，
+	unsigned int digitcount=0;
+	scanf("%d",&number);
+	//printf("%d",number);  
+	int cnt;
+	for(cnt=1;number!=0;cnt++){
+		number=number/2;
+	}
+	printf("%d",33-cnt);
+	return 0;
+}
