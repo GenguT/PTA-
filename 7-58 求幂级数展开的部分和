@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+	double N,sum=1.0;
+	scanf("%lf",&N);
+	
+	int cnt;
+	for(cnt = 1;;cnt++){
+		int i,div=1;
+		for(i=1;i<=cnt;i++){
+			div*=i;
+			
+		}
+		printf("%d\n",div);
+		
+		int j;
+		double a,mi=1;
+		for(j=1;j<=cnt;j++)
+		{
+			mi*=N;
+		}
+		printf("%f\n",mi);
+		
+		a=mi/div;
+		sum+=a;
+		if(a<0.00001){
+			printf("%.4f",sum);
+			break;
+		}
+	}
+	return 0;
+}
